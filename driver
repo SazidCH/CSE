@@ -1,3 +1,6 @@
+import student:
+import dept:
+
 s1 = Student("Akib", 22301010, 3.29)
 s2 = Student("Reza", 22101010, 3.45)
 s3 = Student("Ruhan", 23101934, 4.00)
