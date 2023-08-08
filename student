@@ -1,0 +1,20 @@
+class Student:
+    def __init__(self, name, id, cgpa):
+        self.name = name
+        self.__id = id
+        self.__cgpa = cgpa
+
+    def getID(self):
+        return self.__id
+
+    def setId(self, new_id):
+        self.__id = new_id
+
+    def getCGPA(self):
+        return self.__cgpa
+
+    def getInfo(self):
+        return f"Student Name: {self.name}\nID: {self.__id}\nCGPA: {self.__cgpa}\n"
+
+    def getNAME(self):
+        return self.name
