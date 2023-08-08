@@ -1,0 +1,28 @@
+class Department:
+    def __init__(self, dept_name):
+        self.dept_name = dept_name
+        self.students_list = []
+
+    def findStudent(self, id):
+        for student in self.students_list:
+            if student.getID() == id:
+                print(f"Student info:\n{student.getInfo()}")
+                return
+        print("Student with this ID doesn't exist, Please give a valid ID")
+
+    def addStudent(self, *students):
+        for student in students:
+            for i in self.students_list:
+                if i.getID() == student.getID():
+                    print("Student with the same ID already exists, Please try with another ID")
+                    return
+            self.students_list.append(student)
+            print(f"Welcome to {self.dept_name} department, {student.getNAME()}")
+
+    def details(self):
+        print(f"Department Name: {self.dept_name}")
+        print(f"Number of student: {len(self.students_list)}")
+        print("Details of the students:")
+        for student in self.students_list:
+            print(f"Student name: {student.getNAME()}, ID: {student.getID()}, cgpa: {student.getCGPA()}")
+
