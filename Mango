@@ -1,0 +1,39 @@
+class Mango:
+    def __init__(self, formalin=False, name=""):
+        self.__formalin = formalin
+        self.__name = name
+
+    def getName(self):
+        return self.__name
+
+    def hasFormalin(self):
+        return self.__formalin
+
+class Jackfruit:
+
+    def __init__(self, formalin=False, name=""):
+        self.__formalin = formalin
+        self.__name = name
+
+    def getName(self):
+        return self.__name
+
+    def hasFormalin(self):
+        return self.__formalin
+
+class testFruit():
+
+    def test(self, fruit):
+        print('----Printing Detail----')
+        if fruit.hasFormalin():
+            print('Do not eat the',fruit.getName(),'.')
+            print(f"{fruit.getName()}s are bad for you.")
+        else:
+            print('Eat the',fruit.getName(),'.')
+            print(f"{fruit.getName()}s are good for you.")
+
+m = Mango(True, "Mango")
+j = Jackfruit(False, "Jackfruit")
+t1 = testFruit()
+t1.test(m)
+t1.test(j)
